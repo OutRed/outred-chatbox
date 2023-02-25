@@ -39,5 +39,50 @@
       </div>
       <br><br>
     </div>
+    <!DOCTYPE HTML>
+<html>
+  <head>
+    <title>OutRed Chatbox</title>
+    <meta name = "charset" charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script src = "script.js"></script>
+    <script src= "socket.io/socket.io.js"></script>
+  </head>
+  <body onload = "onload()">
+    <div id = "Main">
+      <audio id = "Ding" src = "Ding.mp3"> </audio>
+      <center><h1 id = "Title"> OutRed Chatbox</h1></center>
+      <center><p>Talk to anybody by connecting or creating a chatroom!</p></center>
+      <div id = "AccessPort">
+        <label id = "NameLabel"> </label>
+        <input id = "NameInput" placeholder="Enter Username" type = "text">
+        <br><br>
+        <label id = "IDLabel"> </label>
+        <input id = "IDInput" value = "" placeholder="Join/Create Chatroom" type = "text">
+        <input id = "ConnectButton" class = "Button" type = "submit" value = "Connect" onclick = "Connect()">
+      </div>
+      <h2 id = "RoomID"> Chatroom : None </h2>
+      <div id = "Chat">
+        <p id = "Message0" class = "Message"> - </p>
+        <p id = "Message1" class = "Message"> - </p>
+        <p id = "Message2" class = "Message"> - </p>
+        <p id = "Message3" class = "Message"> - </p>
+        <p id = "Message4" class = "Message"> - </p>
+        <p id = "Message5" class = "Message"> - </p>
+        <p id = "Message6" class = "Message"> - </p>
+        <p id = "Message7" class = "Message"> - </p>
+        <p id = "Message8" class = "Message"> - </p>
+        <p id = "Message9" class = "Message"> - </p>
+        <label id = "MessageLabel"> </label>
+        <input id = "ComposedMessage" placeholder="Your Message"type = "text">
+        <input id = "SendMessage" onclick="Send()" value = "Send" class = "Button" type = "submit">
+      </div>
+      <br><br>
+    </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"
+  integrity="sha512-WHkPwomGg+IvjJjKzPZo/B5+y5I+ZtUpRK/wRLJ1pq23+YpTFbPuzoA0x8jK/EJ99dqUD+mt2OPDM/TT0eDv/A=="
+  crossorigin="anonymous"></script>
+<script src="${serverUrl}/socket.io/socket.io.js"></script>
   </body>
 </html>
